@@ -1,5 +1,7 @@
 import App from "../App.tsx";
 import type {ReactElement} from "react";
+import Counter from "../pages/counter/counter.tsx";
+import Request from "../pages/request/request.tsx"
 
 export const Routs = [
     {
@@ -8,7 +10,7 @@ export const Routs = [
         children: [
             {
                 path: 'counter',
-                element: <div>counter</div>
+                element: <Counter/>
             },
             {
                 path: 'counter-with-hook',
@@ -16,7 +18,7 @@ export const Routs = [
             },
             {
                 path: 'request',
-                element: <div>request</div>
+                element: <Request/>
             },
         ]
     },

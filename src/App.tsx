@@ -6,14 +6,14 @@ function App() {
   const routes = RoutParser(Routs)
 
   return (
-    <>
+    <div className='container'>
       <nav>
         {routes.map((route) =>
            <NavLink to={route.path}>{route.path}</NavLink>
         )}
       </nav>
-      <Outlet/>
-    </>
+            <Outlet/>
+    </div>
   )
 }
 

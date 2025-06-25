@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+button, input {
+    height: 35px;
+    padding: 5px 50px;
+    border: none;
+    box-shadow: 0 0 3px rgba(80, 80, 80, 0.7);
+    border-radius: 10px;
+    background-color: #c1ccf3;
+}
+.block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
