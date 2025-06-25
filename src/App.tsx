@@ -1,17 +1,15 @@
 import './App.css'
 import {NavLink, Outlet} from "react-router";
-import {Routs} from './routing/Routs'
+import {RoutParser, Routs} from './routing/Routs'
 
 function App() {
+  const routes = RoutParser(Routs)
 
   return (
     <>
       <nav>
-        {Routs.map((route) =>
+        {routes.map((route) =>
            <NavLink to={route.path}>{route.path}</NavLink>
-        )}
-        {Routs[0].children.map((child) =>
-            <NavLink to={child.path}>{child.path}</NavLink>
         )}
       </nav>
       <Outlet/>
