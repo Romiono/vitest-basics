@@ -9,11 +9,7 @@ describe("App", () => {
     it('checkout_library_working', () => {
         render(<MemoryRouter initialEntries={['/']}>
             <Routes>
-                <Route path="/" element={<App />}>
-                    <Route path="counter" element={<div>counter</div>} />
-                    <Route path="counter-with-hook" element={<div>counter-with-hook</div>} />
-                    <Route path="request" element={<div>request</div>} />
-                </Route>
+                <Route path="/" element={<App />}/>
             </Routes>
         </MemoryRouter>);
       expect(screen.getByText('/')).toBeInTheDocument();

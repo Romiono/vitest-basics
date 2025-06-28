@@ -9,7 +9,7 @@ function App() {
     <div className='container'>
       <nav>
         {routes.map((route) =>
-           <NavLink to={route.path}>{route.path}</NavLink>
+           <NavLink to={route.path} key={route.path}>{route.path}</NavLink>
         )}
       </nav>
             <Outlet/>
