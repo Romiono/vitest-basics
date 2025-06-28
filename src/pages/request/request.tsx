@@ -3,7 +3,7 @@ import { type User, UserApi } from "../../api/UserApi.ts";
 
 const Request = () => {
 
-    const [user, setUser] = useState<User[]>([]);
+    const [user, setUser] = useState<User[] | null>(null);
     useEffect( () => {
         getUsers().then(res => console.log(res));
     }, []);
