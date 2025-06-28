@@ -1,12 +1,11 @@
 import {describe, it, expect, beforeAll} from "vitest";
-import {render, renderHook, screen} from "@testing-library/react";
+import {render, renderHook, screen, act} from "@testing-library/react";
 import {MemoryRouter, Route, Routes} from "react-router";
-import App from "../../App.tsx";
 import userEvent from "@testing-library/user-event";
 import Counter from "./counter.tsx";
 import "@testing-library/jest-dom/vitest";
 import {useCounter} from "./hooks/useCounter.tsx";
-import {act} from "react";
+
 
 
 
@@ -15,11 +14,7 @@ describe('counter page', () => {
         render(
             <MemoryRouter initialEntries={['/counter']}>
                 <Routes>
-                    <Route path="/" element={<App />}>
-                        <Route path="counter" element={<Counter/>}/>
-                        <Route path="counter-with-hook" element={<div>counter-with-hook</div>} />
-                        <Route path="request" element={<div>request</div>} />
-                    </Route>
+                    <Route path="counter" element={<Counter/>}/>
                 </Routes>
             </MemoryRouter>
         );
